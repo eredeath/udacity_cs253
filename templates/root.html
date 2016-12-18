@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Root</title>
+    </head>
+    <form>
+     <body style="margin:0">
+        <h1 style="background-color: #ddd; color: #888, margin: 0 height: 50px">
+            Root
+        </h1>       
+        <ul style="list-style-type: none">
+        {% for page in pages %}
+            <li><button type="submit" value={{page.address}} name="page">{{page.name}}</button></li>
+        {% endfor %}
+        </ul>
+     </body>
+    </form>
+</html>
