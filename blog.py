@@ -38,7 +38,7 @@ class blog_home(Handler):
 
 class blog_newpost(Handler):
     def render_newpost(self, title="", body="", error=""):
-        self.render("newpost.html", title=title, body=body, error=error)
+        self.render("newpost.html", title=subject, body=content, error=error)
 
     def get(self):
         self.render_newpost()
@@ -48,8 +48,8 @@ class blog_newpost(Handler):
         return
 
     def post(self):
-        title = self.request.get("title")
-        body = self.request.get("body")
+        title = self.request.get("subject")
+        body = self.request.get("content")
         if title and body:
             a = Entries(title =title, body = body)
             a.put()
