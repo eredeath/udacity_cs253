@@ -5,6 +5,7 @@ from hw1 import *
 from hw1prt2 import *
 from lesson2 import *
 from lesson3 import *
+from blog import *
 from collections import namedtuple
 
 class root(Handler):
@@ -25,7 +26,10 @@ pages = [
         Page('/hw1/prt2/verified', verified, 'Hw1 Prt2 Verified'),
         Page('/lesson2', template_refactored, 'Lesson 2 (shopping list)'),
         Page('/lesson2/fizzbuzz', FizzBuzzHandler, 'fizzbuzz'),
-        Page('/lesson3/ascii_chan', ascii_chan, 'Ascii Chan')
+        Page('/lesson3/ascii_chan', ascii_chan, 'Ascii Chan'),
+        Page('/blog', blog_home, 'Blog'),
+        Page('/blog/newpost', blog_newpost, 'Blog Newpost'),
+        Page('/blog/(\d+)', post_permalink, 'Post')
     ]         
 
 app = webapp2.WSGIApplication( pages, debug=True)

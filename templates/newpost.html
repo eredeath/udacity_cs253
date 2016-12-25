@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>New Entry</title>
+</head>
+<body style="margin:0">
+    <h1 style="background-color: #ddd; color: #888; margin: 0; height: 50px"> New Entry
+    </h1>
+    <form method="post">
+        <label>
+                    <div>title</div>
+                    <input type="text" name="title" value="{{title}}">
+                </label>
+        <label>
+                    <div>body</div>
+                    <textarea name="body">{{body}}</textarea>
+                </label>
+
+        <div class="error">{{error}}</div>
+        <input type="submit">
+    </form>
+</body>
+<footer>
+    <form>
+        <ul style="list-style-type: none">
+<li><button type="submit" value='/' name="page">home</button></li>
+</ul>
+</form>
+</footer>
